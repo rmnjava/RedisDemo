@@ -19,11 +19,11 @@ public class Consumer implements Runnable {
                     for(int i=0;i<jedis.llen("tasklist");i++){
                         System.out.println("lindex i "+jedis.lindex("tasklist",i));
                         if(jedis.llen("map")<3) {
-                            System.out.println("rpush map "+jedis.lindex("tasklist",i)+" "+ jedis.rpush("map",jedis.lindex("tasklist",i)));
+                            System.out.println("rpush map "+jedis.lindex("tasklist",i));
+                            jedis.rpush("map",jedis.lindex("tasklist",i));
                         }
                         if(jedis.llen("map")==3){
                             System.out.println("ltrim map "+jedis.ltrim("map",2,0));
-                            System.out.println("ltrim tasklist "+jedis.ltrim("tasklist",2,0));
                         }
                         Thread.sleep(1000L);
                     }
