@@ -1,1 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/compiler.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+RedisDemo.iml

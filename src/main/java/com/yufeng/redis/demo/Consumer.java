@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class Consumer implements Runnable {
 
-    Jedis jedis = new Jedis("10.101.92.50",6379);
+    Jedis jedis = new Jedis("127.0.0.1",6379);
     public void run() {
         while (true){
             try{
