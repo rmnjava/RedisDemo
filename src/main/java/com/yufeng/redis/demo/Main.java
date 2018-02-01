@@ -7,11 +7,14 @@ public class Main {
 
     public static void main(String[] args){
         try {
-            Thread producer = new Thread(new Producer());
-            Thread consumer = new Thread(new Consumer());
+//            Thread producer = new Thread(new Producer());
+//            Thread consumer = new Thread(new Consumer());
+//
+//            producer.start();
+//            consumer.start();
 
-            producer.start();
-            consumer.start();
+            Thread spyer = new Thread(new ShowRedis());
+            spyer.start();
 
             //主线程休眠
             Thread.sleep(Long.MAX_VALUE);
