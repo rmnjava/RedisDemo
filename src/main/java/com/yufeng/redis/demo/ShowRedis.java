@@ -7,12 +7,13 @@ import redis.clients.jedis.Jedis;
  */
 public class ShowRedis implements Runnable{
 
-    Jedis jedis=new Jedis("10.103.105.26",6379);
+    Jedis jedis=new Jedis("192.168.56.101",6379);
     public void run() {
         while(true){
 
             try{
                 System.out.println(jedis.lrange("runningtask",0L,99L));
+                jedis.close();
                 Thread.sleep(5000L);
             }catch (Exception e){
                 e.printStackTrace();

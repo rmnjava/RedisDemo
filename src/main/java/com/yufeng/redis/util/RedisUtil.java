@@ -1,10 +1,12 @@
+package com.yufeng.redis.util;
+
 import redis.clients.jedis.Jedis;
 
 /**
  * Redis数据库分为16个部分[0-15]，默认使用的是0，可以自己指定使用哪个部分
  * yufeng.fan02@ele.me 2018/1/23
  */
-public class CoverageTaskHandler {
+public class RedisUtil {
 
     /**
      * 获得某个key对应的value
