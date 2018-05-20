@@ -1,6 +1,6 @@
-package com.yufeng.redis.demo;
+package com.yufeng.redis.demo.list;
 
-import com.yufeng.redis.util.RedisUtil;
+import com.yufeng.redis.util.list.RedisUtil;
 import redis.clients.jedis.Jedis;
 
 /**

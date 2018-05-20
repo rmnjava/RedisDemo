@@ -1,4 +1,4 @@
-package com.yufeng.redis.demo;
+package com.yufeng.redis.demo.list;
 
 import redis.clients.jedis.Jedis;
 
